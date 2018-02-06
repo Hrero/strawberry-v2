@@ -1,0 +1,54 @@
+@import "../../common/index.less";
+.inner{
+  .size(@width,@height);
+  background: @model;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.payModel{
+  .size(92%,444rpx);
+  background: #ffffff;
+  align-self:flex-end;
+  flex-direction: column;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  padding: 20rpx @modelPadding;
+  .a{
+    border-top: 0rpx solid @colorLine;
+    border-bottom: 0rpx solid @colorLine;
+  }
+}
+.modelTitle{
+  font-size: 38rpx;
+  color: #000000;
+  line-height: 130rpx;
+}
+.modelUsecard{
+  display: flex;
+  justify-content: space-between;
+  line-height: 100rpx;
+  border-top: 1rpx solid @colorLine;
+  border-bottom: 1rpx solid @colorLine;
+}
+.currCommWrap{
+  .size(@width,auto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  .currCommitBtn{
+    width: 100%;
+    background: @btnBackColor;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 28rpx;
+    color: #ffffff;
+    text-align: center;
+    border-radius:10rpx;
+    margin-top: 40rpx;
+  }
+
+}

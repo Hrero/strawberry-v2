@@ -1,0 +1,218 @@
+/*首页选择的字体颜色*/
+.color-red {
+  color: #ff3b40;
+}
+/*全局的下边线颜色*/
+.bottom-color-c {
+  border-bottom: 1rpx solid #ccc;
+}
+.libr {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.urlStylpe {
+  color: #000ecc;
+  text-decoration: underline;
+}
+page {
+  width: 100%;
+  height: auto;
+  background: #eeeeee;
+  letter-spacing: 0rpx;
+  color: #666666;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: Helvetica;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+page > view {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+i {
+  font-style: normal;
+}
+image {
+  width: 100%;
+  height: auto;
+}
+.contain {
+  background-size: contain !important;
+}
+.cover {
+  background-size: cover !important;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+  font-size: 32rpx;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+.content {
+  width: 90%;
+  height: auto;
+  padding: 0 5%;
+  color: #333333;
+  font-size: 31rpx;
+  background: #ffffff;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.showflex {
+  display: flex;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+.mato {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+}
+.mato .indexList {
+  width: 100%;
+  height: auto;
+}
+.mato .indexListLabel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+.mato .picLeft {
+  width: 20%;
+  height: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.mato .picLeft > image {
+  width: 80%;
+  height: 0px;
+}
+.mato .indexListLabelContent {
+  width: 76%;
+  flex: 2.5;
+  color: #333333;
+}
+.mato .icon-cur {
+  width: 28rpx;
+}
+.mato .downListmato {
+  display: flex;
+  justify-content: space-between;
+}
+.mato .downListmato .a {
+  flex: 1;
+  display: flex;
+  color: #888888;
+}
+.mato .downListmato .b {
+  text-align: center;
+  color: #888888;
+}
+.mato .CurgoThis {
+  margin-bottom: 30rpx;
+  line-height: 50rpx;
+}
+.mato .curricupic {
+  width: 28rpx;
+  height: auto;
+  margin-right: 21rpx;
+}
+.indexList {
+  width: 94%;
+  padding: 0rpx 3% 0;
+  background: #ffffff;
+}
+.indexList .indexListLabel {
+  height: 160rpx;
+  width: 100%;
+  padding-top: 10rpx;
+}
+.indexList .indexListLabelpic {
+  width: 20%;
+  height: 128rpx;
+  margin-right: 4%;
+  float: left;
+}
+.indexList .indexListLabelpic image {
+  width: 100%;
+  height: 128rpx;
+}
+.indexList .indexListLabelContent {
+  float: right;
+  width: 76%;
+}
+.indexList .indexListLabelContent view {
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.indexList .txt1 {
+  color: #333333;
+  font-size: 28rpx;
+  width: 100%;
+  margin-bottom: 4rpx;
+}
+.indexList .txt2 {
+  color: #888888;
+  font-size: 24rpx;
+  width: 100%;
+  margin-bottom: 16rpx;
+}
+.indexList .txt3 {
+  color: #888888;
+  font-size: 20rpx;
+}
+.slide-image {
+  width: 100%;
+}
+.indexLabel {
+  width: 100%;
+  height: 90rpx;
+  overflow-x: scroll;
+  background: #ffffff;
+}
+.indexLabelOption {
+  width: 120rpx;
+  box-sizing: content-box;
+  margin: 0 25rpx;
+  height: 84rpx;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  float: left;
+}
+.mar {
+  margin-right: 20rpx;
+}
+.indexReachBottomtext {
+  width: 100%;
+  font-size: 27rpx;
+  text-align: center;
+  margin: 10rpx 0;
+}
+.indexOptionChoose {
+  border-bottom: 4rpx solid #ff8083;
+  color: #333333;
+}

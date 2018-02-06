@@ -1,0 +1,21 @@
+<view class="home">
+  <view class="homeheadWrap">
+    <view class="homeHeadpic"><image mode="widthFix" src="/image/play.png"></image></view>
+    四大队
+  </view>
+
+  <view class="personalList">
+    <view class="personalView" >
+      <image class="personIcon" mode="widthFix" src="/image/dingyue@3x.png"></image>
+      <text>学分查询</text>
+      <image class="personJt" mode="widthFix" src="/image/youhuiquan@3x.png"></image>
+    </view>
+    <view class="personalView qq" >
+      <image class="personIcon as" mode="widthFix" src="/image/youhuiquan@3x.png"></image>
+      <text>学分查询</text>
+      <image class="personJt frsa" mode="widthFix" src="/image/youhuiquan@3x.png"></image>
+    </view>
+  </view>
+
+
+</view>

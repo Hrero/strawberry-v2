@@ -1,0 +1,18 @@
+<!-- 这是自定义组件的内部WXML结构 -->
+<view class="inner" wx:if="{{innerCondition}}" bindtap="customMethod" style="height: 100%;">
+    <view class="payModel">
+        <view class="modelTitle">找到职场新拐点</view>
+        <view class="modelUsecard">
+            <view>选择优惠券</view>
+            <view>暂不使用优惠券</view>
+        </view>
+        <view class="modelUsecard a">
+            <view>支付金额</view>
+            <view>¥ 49.9</view>
+        </view>
+        <view class="currCommWrap">
+            <view class="currCommitBtn ">微信支付</view>
+        </view>
+    </view>
+</view>
+<slot></slot>

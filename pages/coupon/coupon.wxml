@@ -1,0 +1,80 @@
+<view class="container">
+    <view >
+        <view class="indexList">
+            <repeat>
+                <view class="indexListLabel bottom-color-c">
+                    <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                    <view class="indexListLabelContent">
+                        <view class="txt1">找到职场的人生拐点</view>
+                        <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                        <view class="txt3">
+                            <view class="fl mar">已更新10期</view>
+                            <view class="fl">5人订阅</view>
+                            <view class="fr color-red">¥49.9</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="indexListLabel bottom-color-c">
+                    <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                    <view class="indexListLabelContent">
+                        <view class="txt1">找到职场的人生拐点</view>
+                        <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                        <view class="txt3">
+                            <view class="fl mar">已更新10期</view>
+                            <view class="fl">5人订阅</view>
+                            <view class="fr color-red">¥49.9</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="indexListLabel bottom-color-c">
+                    <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                    <view class="indexListLabelContent">
+                        <view class="txt1">找到职场的人生拐点</view>
+                        <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                        <view class="txt3">
+                            <view class="fl mar">已更新10期</view>
+                            <view class="fl">5人订阅</view>
+                            <view class="fr color-red">¥49.9</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="indexListLabel bottom-color-c">
+                    <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                    <view class="indexListLabelContent">
+                        <view class="txt1">找到职场的人生拐点</view>
+                        <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                        <view class="txt3">
+                            <view class="fl mar">已更新10期</view>
+                            <view class="fl">5人订阅</view>
+                            <view class="fr color-red">¥49.9</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="indexListLabel bottom-color-c">
+                    <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                    <view class="indexListLabelContent">
+                        <view class="txt1">找到职场的人生拐点</view>
+                        <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                        <view class="txt3">
+                            <view class="fl mar">已更新10期</view>
+                            <view class="fl">5人订阅</view>
+                            <view class="fr color-red">¥49.9</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="indexListLabel bottom-color-c">
+                    <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                    <view class="indexListLabelContent">
+                        <view class="txt1">找到职场的人生拐点</view>
+                        <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                        <view class="txt3">
+                            <view class="fl mar">已更新10期</view>
+                            <view class="fl">5人订阅</view>
+                            <view class="fr color-red">¥49.9</view>
+                        </view>
+                    </view>
+                </view>
+            </repeat>
+        </view>
+    </view>
+</view>

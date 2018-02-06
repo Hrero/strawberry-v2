@@ -1,0 +1,96 @@
+<view class="index">
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" mode="widthFix" width="355" height="150"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="indexLabel bottom-color-c">
+        <view class="indexLabelWrap" style="width:{{indexLabelOption.length*170}}rpx;height: 90rpx;">
+            <repeat wx:for="{{indexLabelOption}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+                <view class="indexLabelOption {{ tapLabelIndex ==  index?'indexOptionChoose':''}}" data-index="{{index}}" bindtap="taplabel">{{item}}</view>
+            </repeat>
+        </view>
+    </view>
+    <view class="indexList">
+        <repeat>
+            <view class="indexListLabel bottom-color-c">
+                <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                <view class="indexListLabelContent">
+                    <view class="txt1">找到职场的人生拐点</view>
+                    <view class="txt2 libr">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                    <view class="txt3">
+                        <view class="fl mar">已更新10期</view>
+                        <view class="fl">5人订阅</view>
+                        <view class="fr color-red">¥49.9</view>
+                    </view>
+                </view>
+            </view>
+            <view class="indexListLabel bottom-color-c">
+                <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                <view class="indexListLabelContent">
+                    <view class="txt1">找到职场的人生拐点</view>
+                    <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                    <view class="txt3">
+                        <view class="fl mar">已更新10期</view>
+                        <view class="fl">5人订阅</view>
+                        <view class="fr color-red">¥49.9</view>
+                    </view>
+                </view>
+            </view>
+            <view class="indexListLabel bottom-color-c">
+                <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                <view class="indexListLabelContent">
+                    <view class="txt1">找到职场的人生拐点</view>
+                    <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                    <view class="txt3">
+                        <view class="fl mar">已更新10期</view>
+                        <view class="fl">5人订阅</view>
+                        <view class="fr color-red">¥49.9</view>
+                    </view>
+                </view>
+            </view>
+            <view class="indexListLabel bottom-color-c">
+                <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                <view class="indexListLabelContent">
+                    <view class="txt1">找到职场的人生拐点</view>
+                    <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                    <view class="txt3">
+                        <view class="fl mar">已更新10期</view>
+                        <view class="fl">5人订阅</view>
+                        <view class="fr color-red">¥49.9</view>
+                    </view>
+                </view>
+            </view>
+            <view class="indexListLabel bottom-color-c">
+                <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                <view class="indexListLabelContent">
+                    <view class="txt1">找到职场的人生拐点</view>
+                    <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                    <view class="txt3">
+                        <view class="fl mar">已更新10期</view>
+                        <view class="fl">5人订阅</view>
+                        <view class="fr color-red">¥49.9</view>
+                    </view>
+                </view>
+            </view>
+            <view class="indexListLabel bottom-color-c">
+                <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                <view class="indexListLabelContent">
+                    <view class="txt1">找到职场的人生拐点</view>
+                    <view class="txt2">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                    <view class="txt3">
+                        <view class="fl mar">已更新10期</view>
+                        <view class="fl">5人订阅</view>
+                        <view class="fr color-red">¥49.9</view>
+                    </view>
+                </view>
+            </view>
+        </repeat>
+    </view>
+    <view class="indexReachBottomtext">
+        <text>数据加载中...</text>
+    </view>
+</view>
