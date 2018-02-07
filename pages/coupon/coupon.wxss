@@ -140,8 +140,9 @@ image {
   margin-right: 21rpx;
 }
 .indexList {
-  width: 94%;
-  padding: 0rpx 3% 0;
+  width: 92%;
+  height: auto;
+  padding: 0rpx 4% 0;
   background: #ffffff;
 }
 .indexList .indexListLabel {
@@ -172,7 +173,7 @@ image {
   color: #333333;
   font-size: 28rpx;
   width: 100%;
-  margin-bottom: 4rpx;
+  margin-bottom: 6rpx;
 }
 .indexList .txt2 {
   color: #888888;
@@ -184,6 +185,6 @@ image {
   color: #888888;
   font-size: 20rpx;
 }
-.coua {
+.top {
   margin-top: 10rpx;
 }
