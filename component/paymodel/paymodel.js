@@ -23,6 +23,11 @@ Component({
             that.setData({
                 innerCondition:!that.data.innerCondition
             })
+        },
+        clickTicket:function(){
+            wx.navigateTo({
+                url: '/pages/coupon/coupon'
+            })
         }
     },
     ready: function(e){

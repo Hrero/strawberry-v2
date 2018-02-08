@@ -1,0 +1,86 @@
+@import "./index.less";
+
+//list的样式
+
+.mato{margin-top: 20rpx;padding-top: 20rpx;
+
+  .indexList{.size(@width,auto);  }
+  .indexListLabel{.size(@width,auto);display: flex;padding:20rpx 0;  margin-bottom: 20rpx;}
+  .picLeft{.size(20%,auto);flex: 1;
+    display: flex;
+    align-items: center;
+    &>image{.size(80%)}
+  }
+  .indexListLabelContent{width: 76%;flex: 2.5;color: rgb(51,51,51);}
+
+  .icon-cur{width: 28rpx;}
+
+  .downListmato{display: flex;justify-content: space-between;
+    .a{flex: 1;display: flex;color: rgb(136,136,136);}
+    .b{text-align: center;color: rgb(136,136,136);}
+  }
+  .CurgoThis{margin-bottom: 30rpx;line-height: 50rpx;}
+  .curricupic{
+    .size(28rpx,auto);
+    margin-right: 21rpx;
+  }
+
+}
+
+
+
+.curTitle{
+  .size(@width,auto);
+  font-weight: bold;
+  line-height: 70rpx;
+  font-size: 31rpx;
+}
+.curDirs{
+  .size(@width,auto);
+  font-weight: normal;
+  line-height: normal;
+  font-size: 28rpx;
+}
+.curColor{
+  .size(@width,auto);
+  font-weight: normal;
+  line-height: 60rpx;
+  font-size: 26rpx;
+}
+.buyTitle{
+  display: flex;
+  line-height: 80rpx;
+  justify-content: center;
+  font-weight: bold;
+}
+.buydis{
+  margin-bottom: 30rpx;
+  color: rgb(119,119,119);
+  font-size: 28rpx;
+}
+.curDownList{
+  display: flex;
+  flex-direction: column;
+}
+
+.currDowndiscr{color: rgb(187,187,187);font-size: 22rpx;text-align: center;line-height: 100rpx;}
+.currCommWrap{
+  .size(@width,auto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-top: 1rpx solid @colorLine;
+  padding: 14rpx 0;
+  .currCommitBtn{
+    width: 80%;
+    background: @btnBackColor;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 28rpx;
+    color: #ffffff;
+    text-align: center;
+    border-radius:10rpx;
+  }
+
+}

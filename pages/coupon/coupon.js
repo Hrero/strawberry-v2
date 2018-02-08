@@ -18,6 +18,11 @@ Page({
 
         console.log(1)
     },
+    Gocurriculum:function(){
+        wx.navigateBack({
+            delta: 2
+        })
+    },
     onReachBottom:function(){
         console.log(1)
     },

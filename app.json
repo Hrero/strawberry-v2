@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/coupon/coupon",
     "pages/curriculum/curriculum",
+    "pages/coupon/coupon",
     "pages/home/home"
   ],
   "window": {
