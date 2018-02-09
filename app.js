@@ -3,6 +3,8 @@ const openIdUrl = require('./config').openIdUrl
 App({
   onLaunch: function () {
     console.log('App Launch')
+    this.backgroundAudioManager = wx.getBackgroundAudioManager();
+    this.courseAudioListManager = createCourseAudioListManager();
   },
   onShow: function () {
     console.log('App Show')
@@ -17,7 +19,7 @@ App({
   // lazy loading openid
   getUserOpenId: function(callback) {
     var self = this
-console.log(1)
+
     if (self.globalData.openid) {
       callback(null, self.globalData.openid)
     } else {
