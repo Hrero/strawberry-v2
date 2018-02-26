@@ -1,8 +1,7 @@
-// var backgroundAudioManager = wx.getBackgroundAudioManager()
 var formatTime = require('../../util/util.js').formatTime
 var app = getApp();
-let globalBgAudioManager = app.backgroundAudioManager;
-const globalCourseAudioListManager = app.courseAudioListManager;
+
+let globalBgAudioManager = wx.getBackgroundAudioManager();
 
 Page({
     data: {
@@ -17,12 +16,9 @@ Page({
             url: '/pages/curriculum/curriculum'
         })
     },
-    outlineOperation(e) {     // 获取音频地址
-        // // backgroundAudioManager.src = 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46' // 设置了 src 之后会自动播放
-        const courseAudio = e.currentTarget.dataset.outline || {};
-        const targetAudioId = courseAudio.audio_id;
-        // 中间省略一系列合法性检查。
-        this.playTargetAudio(targetAudioId);
+    outlineOperation(e) {     // 点击播放按钮
+
+        this.playTargetAudio();
 
     },
     /**
@@ -33,98 +29,68 @@ Page({
      * - 若未播放完毕，或者点击的不是同一个音频，先暂停当前音频
      * - 执行音频播放操作
      */
-    playTargetAudio(targetAudioId) {
-        const currentAudio = globalCourseAudioListManager.getCurrentAudio();
-
-        // 点击未停止的原音频的话，没必要响应
-        if (targetAudioId === currentAudio.audio_id && !!globalBgAudioManager.currentTime) {
-            return false;
-        } else {
-            this.getAudioSrc(targetAudioId).then(() => {
-
-                // 若未暂停，则先暂停
-                if (!globalBgAudioManager.paused) {
-                    globalBgAudioManager.pause();
-                }
-
-                // 全局切换当前播放的音频index（此时还没有开始播放）
-                globalCourseAudioListManager.changeCurrentAudioById(targetAudioId);
-
-                // 更新当前控件状态，比如新音频的title和长度，总要更新吧。
-                this.updateControlsInNewAudio();
-
-                // 更换并且播放背景音乐
-                globalBgAudioManager.changeAudio();
-            });
-        }
-    },
-    sliderchangeEnd:function(e){   //滑动结束之后触发的事件
-        const position = e.detail.value;
-        this.seekCurrentAudio(position);
-    },
-    seekCurrentAudio(position) {   // 拖动进度条控件
-
-        // 更新进度条
-        const page = this;
-        // 音频控制跳转
-        // 这里有一个诡异bug：seek在暂停状态下无法改变currentTime，需要先play后pause
-        const pauseStatusWhenSlide = backgroundAudioManager.paused;
-        if (pauseStatusWhenSlide) {
+    playTargetAudio() {
+        const that = this;
+        console.log(globalBgAudioManager.paused)
+        // 若未暂停，则先暂停
+        if (!globalBgAudioManager.paused) {
+            globalBgAudioManager.pause();
+        }else{
             globalBgAudioManager.play();
         }
 
     },
-    onPrev(){     //点击暂停播放
+    hanleSliderChange:function(e){   // 响应拖动事件
+        const position = e.detail.value;
+        console.log(position)
+        this.seekCurrentAudio(position);
+    },
+    seekCurrentAudio(position) {     // 更新进度条
+
+        const that = this;
+
+        globalBgAudioManager.seek(Math.floor(position));
+
+    },
+    onPrev(){     //点击播放上一首
+
+        let that = this;
+        globalBgAudioManager.src = 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46';
+        globalBgAudioManager.title = '许巍'
+        globalBgAudioManager.onTimeUpdate(that.onTimeUpdate)
+
+    },
+    onNext(){
+
+        let that = this;
+
+        globalBgAudioManager.src = 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46';
+        globalBgAudioManager.title = '林更新'
+        globalBgAudioManager.onTimeUpdate(that.onTimeUpdate)
+
+    },
+    onTimeUpdate(){   //进度条更新事件
+
+        const that = this;
+
+        var sliderMax = Math.ceil(globalBgAudioManager.duration)   //最大时间秒
+
+        var sliderValue = Math.ceil(globalBgAudioManager.currentTime)  //当前时间秒
+
+        var totalProcess = formatTime(sliderMax-sliderValue)   //剩余时间
+
+        var currentProcess = formatTime(sliderValue)   //转化时间格式
+
+        that.setData({ sliderMax, sliderValue,totalProcess,currentProcess})
 
     },
     initBgAudioListManager() {
-        // options中的函数在执行的时候，this指向函数本身（亲测），因此这里需要保存Page对应的this。
-        const page = this;
-        const self = globalBgAudioManager;
-        const options = {
-            onWaiting() {
-                wx.showLoading({
-                    title: '音频加载中…'
-                });
-                globalBgAudioManager.isWaiting = true;
-            },
-            onTimeUpdate() {
-                if (self.isWaiting) {
-                    self.isWaiting = false;
-                    setTimeout(() => {
-                        wx.hideLoading();
-                    }, 300);
-                    // 设置300ms是为了避免某些音频加载过快而导致Loading效果一闪而过对用户造成糟糕的体验
-                }
-                // 以下代码省略
-            },
-            changeAudio() {    // 修改当前音频
 
-                // 获取并且
-                const { url, audio_id, title, content_type_signare_url } = globalCourseAudioListManager.getCurrentAudio();
-                const { doctor, name, image } = globalCourseAudioListManager.courseInfo;
-                self.title = title;
-                self.epname = name;
-                self.audioId = audio_id;
-                self.coverImgUrl = image;
-                self.singer = doctor.nickname || '丁香医生';
+        const that = this;
 
-                // iOS使用content_type_signare_url
-                const src = isIOS() ? content_type_signare_url : url;
-                if (!src) {
-                    showToast({
-                        title: '音频丢失，无法播放',
-                        icon: 'warn',
-                        duration: 2000
-                    });
-                } else {
-                    self.src = src;
-                }
-            }
-        };
-
-        // decorateBgAudioListManager函数，直接修改globalBgAudioManager对象，从而实现方法的拓展
-        globalBgAudioManager = decorateBgAudioListManager(globalBgAudioManager, options);
+        globalBgAudioManager.src = 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46' // 设置了 src 之后会自动播放
+        globalBgAudioManager.title = '测试用'
+        globalBgAudioManager.onTimeUpdate(that.onTimeUpdate)
 
     },
     onShow() {
@@ -137,26 +103,6 @@ Page({
         var that = this;
 
         that.initBgAudioListManager();
-
-        // var backgroundAudioManager = wx.getBackgroundAudioManager();
-        //
-        // // backgroundAudioManager.src = 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46' // 设置了 src 之后会自动播放
-        //
-        // backgroundAudioManager.onTimeUpdate(function () {
-        //
-        //     var sliderMax = Math.ceil(backgroundAudioManager.duration)   //最大时间秒
-        //
-        //     var sliderValue = Math.ceil(backgroundAudioManager.currentTime)  //当前时间秒
-        //
-        //     var totalProcess = formatTime(sliderMax-sliderValue)   //剩余时间
-        //
-        //     var currentProcess = formatTime(sliderValue)   //转化时间格式
-        //
-        //     that.setData({ sliderMax, sliderValue,totalProcess,currentProcess})
-        //
-        //
-        //
-        // })
 
     }
 })

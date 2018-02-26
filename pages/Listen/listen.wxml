@@ -20,7 +20,7 @@
                 <view class="fl a"><text>{{currentProcess}}</text></view>
                 <view class="fl a">
                     <slider
-                        bindchange="sliderchangeEnd"
+                        bindchange="hanleSliderChange"
                         min="0"
                         max="{{sliderMax}}"
                         value="{{sliderValue}}"
