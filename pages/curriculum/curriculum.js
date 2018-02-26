@@ -3,25 +3,31 @@ Page({
         windowHeight:0,
         condition:false
     },
-    taplabel:function(e){
+    taplabel(e){
         let that = this;
         that.setData({
             tapLabelIndex:e.target.dataset.index
         })
     },
-    clickBuy:function(){
+    clickBuy(){
+
         let that = this;
 
         that.setData({
             condition:!that.condition
         })
 
-        console.log(1)
+        // console.log(1)
     },
-    onReachBottom:function(){
-        console.log(1)
+    GoListenPage(){
+        wx.navigateTo({
+            url: '/pages/listen/listen'
+        })
     },
-    onLoad:function(){
+    onReachBottom(){
+        // console.log(1)
+    },
+    onLoad(){
 
     }
 })

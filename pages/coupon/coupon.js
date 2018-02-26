@@ -20,7 +20,7 @@ Page({
     },
     Gocurriculum:function(){
         wx.navigateBack({
-            delta: 2
+            delta: 1
         })
     },
     onReachBottom:function(){

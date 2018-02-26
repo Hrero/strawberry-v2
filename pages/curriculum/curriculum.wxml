@@ -22,7 +22,7 @@
         <view class="content mato">
             <view class="indexList">
                 <repeat>
-                    <view class="indexListLabel">
+                    <view class="indexListLabel" bindtap="GoListenPage">
                         <view class="picLeft">
                             <image mode="widthFix" src="/image/green_tri.png"></image>
                         </view>

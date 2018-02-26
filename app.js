@@ -2,9 +2,11 @@ const openIdUrl = require('./config').openIdUrl
 
 App({
   onLaunch: function () {
-    console.log('App Launch')
+
     this.backgroundAudioManager = wx.getBackgroundAudioManager();
-    this.courseAudioListManager = createCourseAudioListManager();
+    // console.log(this.backgroundAudioManager,'------',wx)
+
+      // this.courseAudioListManager = createCourseAudioListManager();
   },
   onShow: function () {
     console.log('App Show')
