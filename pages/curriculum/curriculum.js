@@ -1,7 +1,9 @@
 Page({
     data: {
         windowHeight:0,
-        condition:false
+        condition:false,
+        isShow:false,
+        chooseTitle:'暂不使用优惠券'
     },
     taplabel(e){
         let that = this;
@@ -26,6 +28,12 @@ Page({
     },
     onReachBottom(){
         // console.log(1)
+    },
+    onShowDownDes(){
+        let that = this;
+        that.setData({
+            isShow:true
+        })
     },
     onLoad(){
 

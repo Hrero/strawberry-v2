@@ -136,38 +136,72 @@ image {
 .indexa > .indexList .mar {
   margin-right: 20rpx;
 }
-.slide-image {
-  width: 100%;
-}
-.indexLabel {
-  width: 100%;
-  height: 90rpx;
-  overflow-x: scroll;
+.quan {
   background: #ffffff;
-}
-.indexLabelOption {
-  width: 120rpx;
-  box-sizing: content-box;
-  margin: 0 25rpx;
-  height: 84rpx;
-  text-align: center;
-  font-size: 28rpx;
-  line-height: 90rpx;
-  float: left;
-}
-.mar {
-  margin-right: 20rpx;
-}
-.indexReachBottomtext {
   width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.zuo {
+  position: relative;
+  width: 28%;
+  height: auto;
+  color: #ffffff;
+}
+.zuotxt {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.ten {
+  font-size: 80rpx;
+  width: 100%;
+  height: auto;
+}
+.ten:before {
+  content: "¥";
+  font-weight: bold;
   font-size: 27rpx;
+  color: #ffffff;
+}
+.downsa {
+  font-size: 24rpx;
+  width: 100%;
+  height: auto;
+}
+.you {
+  font-size: 22rpx;
+  padding: 10rpx 4% 0;
+  width: 72%;
+  box-sizing: border-box;
+  position: relative;
+}
+.mashag {
+  width: 150rpx;
+  height: 40rpx;
+  color: #ffffff;
+  background: #fc7272;
   text-align: center;
-  margin: 10rpx 0;
+  line-height: 40rpx;
+  position: absolute;
+  top: 70rpx;
+  right: 28rpx;
+  border-radius: 10rpx;
 }
-.indexOptionChoose {
-  border-bottom: 4rpx solid #ff8083;
+.new {
+  font-size: 27rpx;
   color: #333333;
+  margin-bottom: 15rpx;
 }
-page {
-  background: #ffffff;
+.time {
+  color: #888888;
+  margin-top: 50rpx;
+}
+.quana {
+  font-size: 28rpx;
+  color: #333333;
+  text-align: right;
+  margin: 30rpx 30rpx;
+  text-decoration: underline;
 }

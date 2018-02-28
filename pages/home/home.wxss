@@ -165,6 +165,7 @@ image {
   padding: 0 4%;
 }
 .personalView {
+  justify-content: space-between;
   background: #ffffff;
   border-bottom: 1rpx solid #dddddd;
   box-sizing: border-box;
@@ -181,7 +182,6 @@ image {
 }
 .personJt {
   width: 19rpx;
-  margin-left: 460rpx;
 }
 .qq {
   border-bottom: 0rpx solid #dddddd;
@@ -189,6 +189,6 @@ image {
 .as {
   width: 30rpx;
 }
-.frsa {
-  margin-left: 454rpx;
+.zhong {
+  flex: 1;
 }

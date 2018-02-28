@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "草莓书院"
+    "navigationBarTitleText": "草莓书院",
+    "usingComponents": {
+        "goindex": "/component/goindex/goindex"
+    }
 }

@@ -5,7 +5,7 @@
         <view class="modelTitle">找到职场新拐点</view>
         <view class="modelUsecard">
             <view>选择优惠券</view>
-            <view bindtap="clickTicket">暂不使用优惠券</view>
+            <view bindtap="clickTicket">{{chooseTitle}}</view>
         </view>
         <view class="modelUsecard a">
             <view>支付金额</view>

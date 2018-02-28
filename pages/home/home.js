@@ -1,3 +1,6 @@
+// var vendor = require('../../vendor/qcloud-weapp-client-sdk/index');
+var vendor = require('../../util/util');
+
 Page({
   data: {
     list: [
@@ -49,6 +52,9 @@ Page({
     this.setData({
       list: list
     });
+  },
+  onLoad(){
+
   }
 })
 

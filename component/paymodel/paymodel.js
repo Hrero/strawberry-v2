@@ -8,13 +8,17 @@ Component({
         },
         innerCondition:{
             type: Boolean
+        },
+        chooseTitle:{
+            type:String
         }
     },
     data: {
         // 这里是一些组件内部数据
         someData: {},
         windowHeight:'100%',
-        innerCondition:false
+        innerCondition:false,
+        chooseTitle:'暂不使用优惠券'
     },
     methods: {
         // 这里是一个自定义方法
@@ -26,7 +30,7 @@ Component({
         },
         clickTicket:function(){
             wx.navigateTo({
-                url: '/pages/coupon/coupon'
+                url: '/pages/choose/choose'
             })
         }
     },

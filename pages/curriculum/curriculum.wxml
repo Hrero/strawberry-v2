@@ -1,3 +1,4 @@
+<!--列表页-->
 <view class="container" id="conWrap">
     <view >
         <image mode="widthFix" src="/image/location.png"></image>
@@ -6,19 +7,28 @@
             <view class="curDirs">提问的根本目的是获得资讯、建议或想法。凡是限制他人自由和如实回答的问题都不可取。</view>
             <view class="curColor color-red">5人订阅</view>
         </view>
-        <image mode="widthFix" src="/image/location.png"></image>
-        <view class="content">
-            <view class="buyTitle">购买须知</view>
-            <view class="buydis">
-                1.本课程属于专栏课程，共5节，每周更新一节，购买后可不限次数循环收听所有内容。
-            </view>
-            <view class="buydis">
-                2.本课程为虚拟内容服务，订购成功后概不退款，请您理解。
-            </view>
-            <view class="buydis">
-                3.购买过程中，若您遇到任何问题，请联系客服微信：caomei001。
+
+        <view class="zhankai" bindtap="onShowDownDes" wx:if="{{!isShow}}">
+            <text>展开详情</text>
+            <image class="zhankaiimg" src="/image/location.png" mode="widthFix"></image>
+        </view>
+
+        <view class="webDown" wx:if="{{isShow}}">
+            <image mode="widthFix" src="/image/location.png"></image>
+            <view class="content">
+                <view class="buyTitle">购买须知</view>
+                <view class="buydis">
+                    1.本课程属于专栏课程，共5节，每周更新一节，购买后可不限次数循环收听所有内容。
+                </view>
+                <view class="buydis">
+                    2.本课程为虚拟内容服务，订购成功后概不退款，请您理解。
+                </view>
+                <view class="buydis">
+                    3.购买过程中，若您遇到任何问题，请联系客服微信：caomei001。
+                </view>
             </view>
         </view>
+
         <view class="content mato">
             <view class="indexList">
                 <repeat>
@@ -76,6 +86,6 @@
         </view>
 
     </view>
-
-    <component-tag-name id="aa" dataset="bbb" data="ccc" inner-condition="{{condition}}" inner-text="使用了组件"></component-tag-name>
+    <goindex></goindex>
+    <component-tag-name id="aa" dataset="bbb" data="ccc" choose-title="{{chooseTitle}}" inner-condition="{{condition}}" inner-text="使用了组件"></component-tag-name>
 </view>

@@ -10,7 +10,41 @@ Page({
         interval: 5000,
         duration: 1000,
         indexLabelOption:['人气推荐','火热招商','火热招商','火热招商','火热招商','火热招商','啦啦啦啦'],
-        tapLabelIndex:0
+        tapLabelIndex:0,
+        dataJson:[
+            {
+                src:'/image/green_tri.png',
+                title:'找到职场的人生拐点1',
+                dis:'有的人一旦焦虑一旦焦虑，就会产，就会产生产，就会产生了拖延症，据201',
+                date:'10',
+                dy:'5',
+                money:'49.9'
+            },
+            {
+                src:'/image/green_tri.png',
+                title:'找到职场的人生拐点2',
+                dis:'有的人一旦焦虑一旦焦虑，就会产，就会产生产，就会产生了拖延症，据201',
+                date:'10',
+                dy:'5',
+                money:'49.9'
+            },
+            {
+                src:'/image/green_tri.png',
+                title:'找到职场的人生拐点3',
+                dis:'有的人一旦焦虑一旦焦虑，就会产，就会产生产，就会产生了拖延症，据201',
+                date:'10',
+                dy:'5',
+                money:'49.9'
+            },
+            {
+                src:'/image/green_tri.png',
+                title:'找到职场的人生拐点4',
+                dis:'有的人一旦焦虑一旦焦虑，就会产，就会产生产，就会产生了拖延症，据201',
+                date:'10',
+                dy:'5',
+                money:'49.9'
+            }
+        ]
     },
     taplabel:function(e){
         let that = this;
@@ -25,5 +59,10 @@ Page({
     },
     onReachBottom:function(){
 console.log(1)
+    },
+    onLoad(){
+
+
+
     }
 })

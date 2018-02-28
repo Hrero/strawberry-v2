@@ -1,3 +1,4 @@
+<!--首页-->
 <view class="index">
     <swiper indicator-dots="{{indicatorDots}}"
             autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -16,23 +17,26 @@
     </view>
     <view class="indexa">
         <view class="indexList">
-            <repeat>
+            <repeat wx:for="{{dataJson}}" >
                 <view class="indexListLabel bottom-color-c" bindtap="Gocurriculum">
-                    <view class="indexListLabelpic"><image  src="/image/green_tri.png"></image></view>
+                    <view class="indexListLabelpic"><image  src="{{item.src}}"></image></view>
                     <view class="indexListLabelContent">
-                        <view class="txt1">找到职场的人生拐点</view>
-                        <view class="txt2 libr">有的人一旦焦虑一旦焦虑，就会产，就会产生了拖延症，据201...</view>
+                        <view class="txt1">{{item.title}}</view>
+                        <view class="txt2 libr">{{item.dis}}</view>
                         <view class="txt3">
-                            <view class="fl mar">已更新10期</view>
-                            <view class="fl">5人订阅</view>
-                            <view class="fr color-red">¥49.9</view>
+                            <view class="fl mar">已更新{{item.date}}期</view>
+                            <view class="fl">{{item.dy}}人订阅</view>
+                            <view class="fr color-red">¥{{item.money}}</view>
                         </view>
                     </view>
                 </view>
             </repeat>
         </view>
     </view>
-    <view class="indexReachBottomtext">
-        <text>数据加载中...</text>
-    </view>
+    <!--<view class="indexReachBottomtext">-->
+        <!--<text>由草莓书院提供技术支持</text>-->
+    <!--</view>-->
+    <!--<view class="indexReachBottomtext hide">-->
+        <!--<text>数据加载中...</text>-->
+    <!--</view>-->
 </view>

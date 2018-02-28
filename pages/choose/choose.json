@@ -1,7 +1,8 @@
 {
-  "navigationBarTitleText": "草莓书院",
+  "navigationBarTitleText": "选择优惠券",
   "usingComponents": {
     "component-tag-name": "/component/paymodel/paymodel",
     "goindex": "/component/goindex/goindex"
   }
+
 }

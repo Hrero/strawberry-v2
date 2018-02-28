@@ -43,5 +43,6 @@
         </view>
 
     </view>
+    <goindex></goindex>
     <view class="downText">由草莓书院提供技术支持</view>
 </view>
