@@ -1,0 +1,51 @@
+<!--我的优惠券-->
+<view class="container">
+    <view class="topLabel">
+        <view class="weishiyong {{btn?'line':''}}" bindtap="wei">未使用</view>
+        <view class="yishiyong {{btn?'':'line'}}" bindtap="yi">已使用/已过期</view>
+    </view>
+    <repeat wx:for="{{dataPrev}}">
+        <view wx:if="{{(item.sign == 1) && btn}}" class="quan" bindtap="Gocurriculum" data-title="{{item.new}}">
+            <view class="fl zuo">
+                <view class="zuotxt">
+                    <view class="ten">{{item.jia}}</view>
+                    <view class="downsa">满{{item.man}}元可用</view>
+                </view>
+                <image  mode="widthFix" src="/image/juxing1@3x.png"></image>
+            </view>
+            <view class="fr you">
+                <view>
+                    <view class="new">{{item.new}}</view>
+                    <view>{{item.des}}</view>
+                </view>
+                <view class="mashag">
+                    立即使用
+                </view>
+                <view class="time">
+                    有效期：{{item.time}}
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{(item.sign == 2) && !btn }}" class="quan"  data-title="{{item.new}}">
+            <view class="fl zuo">
+                <view class="zuotxt">
+                    <view class="ten">{{item.jia}}</view>
+                    <view class="downsa">满{{item.man}}元可用</view>
+                </view>
+                <image  mode="widthFix" src="/image/juxing2@3x.png"></image>
+            </view>
+            <view class="fr you">
+                <view>
+                    <view class="new">{{item.new}}</view>
+                    <view>{{item.des}}</view>
+                </view>
+                <view class="lost">
+                    <image mode="widthFix" src="/image/yishiyong@3x.png"></image>
+                </view>
+                <view class="time">
+                    有效期：{{item.time}}
+                </view>
+            </view>
+        </view>
+    </repeat>
+</view>

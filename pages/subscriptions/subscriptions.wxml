@@ -1,4 +1,4 @@
-<!--优惠券专场-->
+<!--我的订阅-->
 <view class="container">
     <view class="indexa">
         <view class="indexList top">
@@ -39,5 +39,4 @@
             </repeat>
         </view>
     </view>
-    <goindex></goindex>
 </view>

@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/home/home",
+    "pages/myculum/myculum",
     "pages/subscriptions/subscriptions",
+    "pages/home/home",
     "pages/curriculum/curriculum",
     "pages/choose/choose",
     "pages/listen/listen",

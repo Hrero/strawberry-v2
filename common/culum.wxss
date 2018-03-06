@@ -206,6 +206,3 @@ image {
   margin: 30rpx 30rpx;
   text-decoration: underline;
 }
-.a {
-  padding-top: 20rpx;
-}

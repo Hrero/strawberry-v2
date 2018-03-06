@@ -1,5 +1,5 @@
 <!--选择优惠券-->
-<view class="container">
+<view class="container a">
     <repeat wx:for="{{dataPrev}}">
         <view class="quan" bindtap="Gocurriculum" data-title="{{item.new}}">
             <view class="fl zuo">

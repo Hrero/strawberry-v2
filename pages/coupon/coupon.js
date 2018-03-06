@@ -19,8 +19,8 @@ Page({
         console.log(1)
     },
     Gocurriculum:function(){
-        wx.navigateBack({
-            delta: 1
+        wx.navigateTo({
+            url: '/pages/curriculum/curriculum'
         })
     },
     onReachBottom:function(){

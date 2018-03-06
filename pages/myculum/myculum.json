@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "我的订阅",
+  "navigationBarTitleText": "选择优惠券",
   "usingComponents": {
     "component-tag-name": "/component/paymodel/paymodel",
     "goindex": "/component/goindex/goindex"

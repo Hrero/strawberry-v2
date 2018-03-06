@@ -206,6 +206,34 @@ image {
   margin: 30rpx 30rpx;
   text-decoration: underline;
 }
-.a {
-  padding-top: 20rpx;
+.topLabel {
+  width: 100%;
+  height: 80rpx;
+  color: #333333;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  margin-bottom: 24rpx;
+}
+.topLabel view {
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  margin: 0 60rpx;
+  border-bottom: 4rpx solid #ffffff;
+}
+.topLabel .line {
+  border-bottom: 4rpx solid #ff8083;
+}
+.lost {
+  width: 200rpx;
+  height: 160rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 28rpx;
+}
+.lost image {
+  width: 100%;
 }

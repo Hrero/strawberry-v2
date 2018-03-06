@@ -53,6 +53,16 @@ Page({
       list: list
     });
   },
+  goMyculum(){
+      wx.navigateTo({
+          url: '/pages/myculum/myculum'
+      })
+  },
+  goMysubscriptions(){
+      wx.navigateTo({
+          url: '/pages/subscriptions/subscriptions'
+      })
+  },
   onLoad(){
 
   }
